@@ -1,8 +1,12 @@
 using UnityEngine;
-using System;
+using UnityEngine.UI;
 
 public class StagaOut : MonoBehaviour
 {
+    // Score = 0,1,2......
+    private int Score;
+    public Text scoreText;
+
     // 要件定義：StageOutクラスの中に変数 Scoreを作成、オブジェクトがすり抜けたらScoreを１加算する
     // 1. StageOutクラスの中に変数 Scoreを作成
     // 2. 変数 Score は int型 かつ private であること
@@ -14,8 +18,14 @@ public class StagaOut : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // 変数名　otherってなに？
-        // A.すり抜けた相手のコライダー情報
+        //Score = Score + 1;
+        Score += 1;
+        Debug.Log($"Score:{Score}");
+
+        scoreText.text = $"Score:{Score}";
+
+        // 変数名 otherってなに？
+        // A. すり抜けた相手のコライダー情報
         Debug.Log($"{other.name}がすり抜けました。");
         // Destroy関数
         // Destroy(破棄したいオブジェクト）
