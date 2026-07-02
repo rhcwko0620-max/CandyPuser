@@ -3,9 +3,11 @@ using UnityEngine.UI;
 
 public class StagaOut : MonoBehaviour
 {
-    // Score = 0,1,2......
     private int Score;
+    // Score = 0,1,2......
     public Text scoreText;
+// TextMesheProをコード上から取り扱う場合は、TextMeshP
+public TMPro.TextMeshProUGUI scoreTextTMP;
 
     // 要件定義：StageOutクラスの中に変数 Scoreを作成、オブジェクトがすり抜けたらScoreを１加算する
     // 1. StageOutクラスの中に変数 Scoreを作成
